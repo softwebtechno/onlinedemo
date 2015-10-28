@@ -59,9 +59,11 @@
 
             $.ajax({
                 type: 'GET',
-                url: "http://microblogging.wingnity.com/JSONParsingTutorial/jsonActors",
+                url: "http://softwebtechno.com/name.php",
                 contentType: "application/json",
                 dataType: 'jsonp',
+				cache:false,
+				async:false,
                 data: {first: $("#firstname").val(), last: $("#lastname").val() },
                 crossDomain: true,
                 success: function(res) {
