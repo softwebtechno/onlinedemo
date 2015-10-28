@@ -60,14 +60,15 @@
 
             $.ajax({
                 type: 'GET',
-                url: url,
+                url: "http://microblogging.wingnity.com/JSONParsingTutorial/jsonActors",
                 contentType: "application/json",
                 dataType: 'jsonp',
                 data: {first: $("#firstname").val(), last: $("#lastname").val() },
                 crossDomain: true,
                 success: function(res) {
-                    $("#resultsdiv").html("Hello, " + res.firstname + " " + res.lastname);
-                    console.dir(res.fullname);
+					alert(res);
+                    /*$("#resultsdiv").html("Hello, " + res.firstname + " " + res.lastname);
+                    console.dir(res.fullname);*/
                 },
                 error: function(e) {
                     console.log(e.message);
